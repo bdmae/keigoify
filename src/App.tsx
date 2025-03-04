@@ -8,7 +8,7 @@ import useTranslate from './hooks/useTranslate'
 // the user can type in the text and press the different buttons to change the politeness level (the buttons will display as salarymen images)
 // the user can also change the politeness level by pressing a different button
 
-function App() {
+const App: React.FC = () => {
   const [userInput, setUserInput] = useState(''); // user input
   const [selectedFormality, setSelectedFormality] = useState('keigo'); // selected politeness level
 
