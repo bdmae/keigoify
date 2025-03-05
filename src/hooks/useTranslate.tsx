@@ -11,13 +11,11 @@ export default function useTranslate() {
     const [isLoading, setIsLoading] = useState(false);
 
 
-    const translateText = async (userInput, selectedFormality) => {
+    const translateText = async (userInput: string, selectedFormality: string) => {
         if (!userInput.trim()) return; // don't translate empty text
 
         setIsLoading(true);
         setTranslatedText(''); // clear previous translation
-
-        // try to translate the text
         
         try {
             // temporary prompt for testing
