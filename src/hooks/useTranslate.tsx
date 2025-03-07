@@ -19,7 +19,16 @@ export default function useTranslate() {
         
         try {
             // temporary prompt for testing
-            const prompt = `Translate the following text into Japanese ${selectedFormality}: "${userInput}";`;
+            let prompt = '';
+
+            if (selectedFormality === 'casual') {
+                prompt = 'You chose casual!'
+            } else if (selectedFormality === 'formal') {
+                prompt = 'You chose formal!'
+            } else if (selectedFormality === 'keigo') {
+                prompt = 'You chose keigo!'
+            }
+            // const prompt = `Translate the following text into Japanese ${selectedFormality}: "${userInput}";`;
       
             const response = await openai.chat.completions.create({
               model: "gpt-3.5-turbo",
