@@ -1,13 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Panel, TextArea } from "../CommonStyles";
+import { Panel, PanelHeader, TextArea } from "../CommonStyles";
 
 interface TranslationInputProps {
     userInput: string;
-    onChange: (newUserInput: string) => void;
+    onChange: (newValue: string) => void;
 }
 
-const TranslationInput: React.FC<TranslationInputProps> = ({userInput, onChange}) => {
+const TranslationInput: React.FC<TranslationInputProps> = ({ userInput, onChange }) => {
     return (
         <Panel>
             <TextArea

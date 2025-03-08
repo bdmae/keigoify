@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import TranslationInput from './TranslationInput';
 import TranslationOutput from './TranslationOutput';
-import { TranslatorContainer } from '../CommonStyles';
+import { Panel, PanelHeader, TranslatorContainer } from '../CommonStyles';
 import useTranslate from '../hooks/useTranslate';
 import PolitenessSelectors from './PolitenessSelectors';
 import { Politeness } from './PolitenessSelectors';
@@ -27,7 +27,8 @@ const Translator: React.FC = () => {
 
   return (
     <>
-        {/* Selector for politeness level */}
+        {/* add header that shows which politeness is selected  */}
+        <PanelHeader>Selected politeness: {selectedPoliteness}</PanelHeader>
         <PolitenessSelectors
           selectedFormality={selectedPoliteness}
           onFormalityChange={setSelectedPoliteness}

@@ -33,7 +33,7 @@ export const Panel = styled.div`
 
 export const PanelHeader = styled.div`
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 2rem;
   color: #666;
   text-align: center;
 `;

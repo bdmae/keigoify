@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { Panel } from "../CommonStyles";
 import TypingIndicator from "./TypingIndicator";

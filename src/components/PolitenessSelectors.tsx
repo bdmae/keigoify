@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import styled from 'styled-components';
 import { CasualSalaryman, FormalSalaryman, KeigoSalaryman } from './SalarymanIcons';
 
@@ -13,9 +12,10 @@ const SalarymanIconsWrapper = styled.div`
     border: 1px solid transparent;
     border-radius: 0.25rem;
     transition: border-color 0.2s;
+    opacity: 0.3;
   }
   .icon-container.active {
-    border-color: blue;
+    opacity: 1;
   }
 `;
 
