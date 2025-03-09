@@ -6,6 +6,7 @@ export type Politeness = 'casual' | 'formal' | 'keigo';
 const SalarymanIconsWrapper = styled.div`
   display: flex;
   justify-content: center;
+  padding: 0 2rem;
 
   .icon-container {
     cursor: pointer;

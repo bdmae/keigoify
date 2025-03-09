@@ -2,8 +2,7 @@
 import styled from 'styled-components';
 
 export const MainContainer = styled.main`
-  width: 80vw;
-  margin: 0 auto; /* Centers the container */
+  width: 100vw;
   box-sizing: border-box;
 `;
 
@@ -11,14 +10,14 @@ export const TranslatorContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1.2rem;
-  width: 90%;
   max-width: 1200px;
-  margin: 2rem auto;
+  padding: 2rem;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    width: 100%;
-    max-width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
