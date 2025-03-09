@@ -5,30 +5,26 @@ import { Panel, PanelHeader, TranslatorContainer } from '../CommonStyles';
 import useTranslate from '../hooks/useTranslate';
 import PolitenessSelectors from './PolitenessSelectors';
 import { Politeness } from './PolitenessSelectors';
+import useDebounce from '../hooks/useDebounce';
 
 // todo: create interfaces file
 
 const Translator: React.FC = () => {
   const [userInput, setUserInput] = useState('');
   const [selectedPoliteness, setSelectedPoliteness] = useState<Politeness>('casual');
+  const debouncedValue = useDebounce(userInput);
 
   const { translatedText, isLoading, translateText } = useTranslate();
 
   // debounce translation: when userInput or selectedPoliteness changes, wait 500ms before translating
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (userInput.trim()) {
-        translateText(userInput, selectedPoliteness);
-      }
-    }, 500);
-
-    return () => clearTimeout(timeout);
-  }, [userInput, selectedPoliteness]);
+    translateText(debouncedValue, selectedPoliteness);
+  }, [debouncedValue, selectedPoliteness]);
 
   return (
     <>
         {/* add header that shows which politeness is selected  */}
-        <PanelHeader>Selected politeness: {selectedPoliteness}</PanelHeader>
+        <PanelHeader>{selectedPoliteness}</PanelHeader>
         <PolitenessSelectors
           selectedFormality={selectedPoliteness}
           onFormalityChange={setSelectedPoliteness}

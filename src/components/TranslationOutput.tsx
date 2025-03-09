@@ -10,7 +10,7 @@ interface TranslationOutputProps {
 const TranslationOutput: React.FC<TranslationOutputProps> = ({ translatedText, isLoading }) => {
     return (
         <Panel>
-            {isLoading ? <TypingIndicator/> : <p>{translatedText}</p>}
+            {isLoading ? <TypingIndicator /> : translatedText ? <p>{translatedText}</p> : ''}
         </Panel>
     );
 };

@@ -18,8 +18,8 @@ const dotAnimation = keyframes`
 
 const DotContainer = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-self: start;
+    padding: 0.5rem;
     gap: 0.2rem;
 `;
 

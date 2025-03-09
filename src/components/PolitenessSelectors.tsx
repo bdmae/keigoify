@@ -5,10 +5,10 @@ export type Politeness = 'casual' | 'formal' | 'keigo';
 
 const SalarymanIconsWrapper = styled.div`
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+
   .icon-container {
     cursor: pointer;
-    padding: 0.5rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
     transition: border-color 0.2s;
@@ -16,6 +16,15 @@ const SalarymanIconsWrapper = styled.div`
   }
   .icon-container.active {
     opacity: 1;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+
+    @media (min-width: 768px) {
+      max-width: 100px;
+    }
   }
 `;
 

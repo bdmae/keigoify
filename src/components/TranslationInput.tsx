@@ -7,13 +7,15 @@ interface TranslationInputProps {
 
 const TranslationInput: React.FC<TranslationInputProps> = ({ userInput, onChange }) => {
     return (
-        <Panel>
-            <TextArea
-                value={userInput}
-                onChange={(e) => onChange(e.target.value)}
-                placeholder="Enter text to translate..." 
-            />
-        </Panel>
+        <>
+          <Panel>
+              <TextArea
+                  value={userInput}
+                  onChange={(e) => onChange(e.target.value)}
+                  placeholder="Enter text to translate..." 
+              />
+          </Panel>
+       </>
     ); 
 }
 
