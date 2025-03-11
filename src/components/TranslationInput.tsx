@@ -1,4 +1,4 @@
-import { Panel, PanelHeader, TextArea } from "../CommonStyles";
+import { Panel, TextArea } from "../CommonStyles";
 
 interface TranslationInputProps {
     userInput: string;
