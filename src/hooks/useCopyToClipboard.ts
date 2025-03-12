@@ -7,6 +7,10 @@ export default function useCopyToClipboard() {
         try {
             await navigator.clipboard.writeText(text);
             setIsCopied(true);
+
+            setTimeout(() => {
+                setIsCopied(false);
+            }, 3000);
         } catch (error) {
             console.error(`Error copying to clipboard: ${error}`);
             setIsCopied(false);

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CasualSalaryman, FormalSalaryman, KeigoSalaryman } from './atoms/SalarymanIcons';
+import { CasualSalaryman, FormalSalaryman, KeigoSalaryman, KeigoSideSalaryman } from '../atoms/SalarymanIcons';
 
 export type Politeness = 'casual' | 'formal' | 'keigo';
 

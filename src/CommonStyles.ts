@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const MainContainer = styled.main`
   width: 100vw;
+  padding: 4rem 0;
   box-sizing: border-box;
 `;
 
@@ -40,6 +41,10 @@ export const Panel = styled.div`
     text-align: left;
     font-family: inherit;
     margin: unset;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 12rem;
   }
 `;
 

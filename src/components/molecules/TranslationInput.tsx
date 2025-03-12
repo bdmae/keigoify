@@ -1,5 +1,5 @@
-import { Panel, TextArea } from "../CommonStyles";
-import ClearTextButton from "./atoms/ClearTextButton";
+import { Panel, TextArea } from "../../CommonStyles";
+import ClearTextButton from "../atoms/ClearTextButton";
 
 interface TranslationInputProps {
     userInput: string;

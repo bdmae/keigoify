@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import TranslationInput from './TranslationInput';
 import TranslationOutput from './TranslationOutput';
-import { PanelHeader, TranslatorContainer } from '../CommonStyles';
-import useTranslate from '../hooks/useTranslate';
+import { PanelHeader, TranslatorContainer } from '../../CommonStyles';
+import useTranslate from '../../hooks/useTranslate';
 import PolitenessSelectors from './PolitenessSelectors';
 import { Politeness } from './PolitenessSelectors';
-import useDebounce from '../hooks/useDebounce';
+import useDebounce from '../../hooks/useDebounce';
 
 // todo: create interfaces file
 

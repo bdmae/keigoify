@@ -1,6 +1,7 @@
 import './App.css'
 import { MainContainer } from './CommonStyles';
-import Translator from './components/Translator';
+import Navbar from './components/molecules/Navbar';
+import Translator from './components/molecules/Translator';
 
 // keigoify app is an app that translates text into different politeness levels of Japanese depending on the user's input (button press) using openAI
 // there are 3 modes, causal, polite, and honorific (keigo)
@@ -10,9 +11,12 @@ import Translator from './components/Translator';
 
 const App: React.FC = () => {
   return (
-    <MainContainer>
-      <Translator />
-    </MainContainer>
+    <>
+      <Navbar />
+      <MainContainer>
+        <Translator />
+      </MainContainer>
+    </>
   )
 }
 

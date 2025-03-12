@@ -1,6 +1,6 @@
-import { Panel } from "../CommonStyles";
-import TypingIndicator from "./atoms/TypingIndicator";
-import CopyButton from "./atoms/CopyButton";
+import { Panel } from "../../CommonStyles";
+import TypingIndicator from "../atoms/TypingIndicator";
+import CopyButton from "../atoms/CopyButton";
 
 interface TranslationOutputProps {
     translatedText: string;

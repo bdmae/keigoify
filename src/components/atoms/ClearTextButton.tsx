@@ -12,6 +12,10 @@ const ClearTextButtonStyled = styled.button`
   right: 0.4rem;
   top: 0.4rem;
 
+  @media (max-width: 768px) {
+    padding: 0.4rem;
+  }
+
   &:focus {
     outline: none;
     box-shadow: none;
