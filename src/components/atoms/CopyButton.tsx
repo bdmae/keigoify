@@ -1,24 +1,29 @@
 import styled from "styled-components";
 import { FaRegCopy } from 'react-icons/fa';
-import useCopyToClipboard from '../hooks/useCopyToClipboard';
+import useCopyToClipboard from '../../hooks/useCopyToClipboard';
 
 const CopyButtonStyle = styled.button`
   background: none;
   border: none;
-  color: #007bff;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  text-decoration: none;
+  color: #666;
   cursor: pointer;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  padding: 0.8rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
 
   &:hover {
-    text-decoration: underline;
+    border: none;
   }
 
   svg {
-    margin-right: 0.3rem;
+    font-size: 1.4rem;
   }
 `;
 
@@ -31,8 +36,7 @@ const CopyButton: React.FC<CopyButtonProps> = ({ textToCopy }) => {
 
   return (
     <CopyButtonStyle onClick={() => copyToClipboard(textToCopy)}>
-      <FaRegCopy />
-      {isCopied ? 'Copied!' : 'Copy'}
+      {isCopied ? '✅ copied' : <FaRegCopy />}
     </CopyButtonStyle>
   );
 };

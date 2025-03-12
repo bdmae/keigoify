@@ -1,7 +1,6 @@
 import { Panel } from "../CommonStyles";
-import TypingIndicator from "./TypingIndicator";
-import useCopyToClipboard from "../hooks/useCopyToClipboard";
-import CopyButton from "./CopyButton";
+import TypingIndicator from "./atoms/TypingIndicator";
+import CopyButton from "./atoms/CopyButton";
 
 interface TranslationOutputProps {
     translatedText: string;
@@ -9,11 +8,9 @@ interface TranslationOutputProps {
 }
 
 const TranslationOutput: React.FC<TranslationOutputProps> = ({ translatedText, isLoading }) => {
-    const { isCopied, copyToClipboard } = useCopyToClipboard();
-
     return (
         <Panel>
-            <CopyButton textToCopy={translatedText} />
+            {translatedText && (<CopyButton textToCopy={translatedText} />)}
             {isLoading ? <TypingIndicator /> : translatedText ? <p>{translatedText}</p> : ''}
         </Panel>
     );
