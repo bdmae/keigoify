@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
       <Logo>keigoify</Logo>
       <SlogansContainer>
         <Slogan>どの言語からでも、どんな日本語の丁寧さでも</Slogan>
-        <Slogan>any Japanese politness, from any language</Slogan>
+        <Slogan>never speak in the incorrect Japanese politeness again!</Slogan>
       </SlogansContainer>
     </NavbarContainer>
   );

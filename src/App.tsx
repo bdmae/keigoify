@@ -1,7 +1,9 @@
+import { useEffect } from 'react';
 import './App.css'
 import { MainContainer } from './CommonStyles';
 import Navbar from './components/molecules/Navbar';
 import Translator from './components/molecules/Translator';
+import InstructionModal from './components/molecules/InstructionModal';
 
 // keigoify app is an app that translates text into different politeness levels of Japanese depending on the user's input (button press) using openAI
 // there are 3 modes, causal, polite, and honorific (keigo)
@@ -12,6 +14,7 @@ import Translator from './components/molecules/Translator';
 const App: React.FC = () => {
   return (
     <>
+      <InstructionModal />
       <Navbar />
       <MainContainer>
         <Translator />
