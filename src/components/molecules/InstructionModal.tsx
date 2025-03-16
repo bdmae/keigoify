@@ -97,7 +97,7 @@ const InstructionModal: React.FC = () => {
           <IconWrapper>
             <KeigoSalaryman />
             <p>Keigo</p>
-            <small>(Honorific language)</small>C
+            <small>(Honorific language)</small>
           </IconWrapper>
         </IconRow>
         <CloseButton onClick={markAsSeen}>Got it!</CloseButton>
