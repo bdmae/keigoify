@@ -38,6 +38,10 @@ const Slogan = styled.div`
   font-size: 1rem;
   color: #fff;
   text-align: right;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const Navbar: React.FC = () => {
